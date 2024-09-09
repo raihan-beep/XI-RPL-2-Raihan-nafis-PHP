@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Singkat</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background-color: black;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            margin: 10px 0;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            left: 100px; /* Sesuaikan dengan posisi yang diinginkan */
+            width: 2px;
+            background-color: black;
+            height: calc(100vh - 38px); /* Tinggi layar dikurangi tinggi header dan padding */
+        }
+
+        .php-content {
+            margin-left: 120px; /* Memberi jarak dari garis vertikal */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Profil Singkat</header>
+    <hr>
+
+    <div class="container">
+        <div class="menu">
+            <a href="index.php">Home</a>
+        </div>
+        <div class="vertical-line"></div>
+
+        <div class="php-content">
+            <?php
+            // Menyimpan data profil dalam variabel
+            $nama = "Raihan Nafis";
+            $umur = 15;
+            $sekolah = "SMKN 2 BANDUNG";
+            $cita_cita = "Programmer";
+
+            // Menampilkan data profil ke layar
+            echo "<p>Nama: $nama</p>";
+            echo "<p>Umur: $umur tahun</p>";
+            echo "<p>Sekolah: $sekolah</p>";
+            echo "<p>Cita-cita: $cita_cita</p>";
+            ?>
+        </div>
+    </div>
+
+</body>
+</html>
